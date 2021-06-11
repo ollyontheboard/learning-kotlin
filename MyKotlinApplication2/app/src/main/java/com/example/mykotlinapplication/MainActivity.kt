@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
     val MULTIPLY: String = "*"
     val DIVIDE: String = "/"
 
-    val ERROR = "an error occured"
+    // internal access modifier means variable is available in the module it was created in
+    internal val ERROR = "an error occured"
     val testOperandOne = 5.0
     val testOperandTwo = 4.0
 
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         }
     fun evaluateBinomial(OpOne:Double, OpTwo:Double, Sym:String): String{
+
         //performing and returnin as string the value of operation depending on the operator
         return when(Sym){
             ADD -> (OpOne+OpTwo).toString()
